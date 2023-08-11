@@ -1,5 +1,5 @@
 {% set name = "caped-ai-augmentations" %}
-{% set version = "1.0.9" %}
+{% set version = "1.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/caped-ai-augmentations-{{ version }}.tar.gz
-  sha256: cb80cb6eb10647460d810b97cdad1af5e8ee1b7a48354eb2afb6b32e573b4e25
+  sha256: cff1cae6077b0e383d99c99565887290d809ca130214beed01f74aa0b035a2eb
 
 build:
   noarch: python
