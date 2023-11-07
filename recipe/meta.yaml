@@ -23,28 +23,29 @@ requirements:
     - dask-core
     - natsort
     - opencv
-    - pandas
+    - pandas  # Imported but not in requirements
     - photutils
     - python >=3.9
     - scikit-learn
-    - scipy
+    - scipy  # Imported but not in requirements
 
 test:
   imports:
     - caped_ai_augmentations
   commands:
     - pip list
-    # - pip check  # Fails due to opencv-python-headless
+    # - pip check  # Fails due to opencv-python
   requires:
     - pip
 
 about:
-  home: https://github.com/Kapoorlabs-CAPED/caped-ai-augmentations/
+  home: https://pypi.org/project/caped-ai-augmentations
   summary: |
     Augmentations for volume, planar segmentation, classification image
     segmentation and associated csv file of oneat clicks.
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/Kapoorlabs-CAPED/caped-ai-augmentations
 
 extra:
   recipe-maintainers:
