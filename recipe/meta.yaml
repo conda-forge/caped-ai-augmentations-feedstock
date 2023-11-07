@@ -20,13 +20,15 @@ requirements:
     - python >=3.9
   run:
     - albumentations
-    - dask-core
-    - natsort
-    - opencv
+    - dask-core  # Not imported
+    - natsort  # Not imported
+    - numpy  # Imported but not in requirements
+    - opencv  # Not imported
     - pandas  # Imported but not in requirements
     - photutils
     - python >=3.9
-    - scikit-learn
+    - scikit-image  # Imported but not in requirements
+    - scikit-learn  # Not imported
     - scipy  # Imported but not in requirements
 
 test:
