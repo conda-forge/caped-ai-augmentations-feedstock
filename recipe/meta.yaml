@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/caped-ai-augmentations-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/caped-ai-augmentations-{{ version }}.tar.gz
   sha256: 1c88a9ff5ba9b8dccf150ccd321d9d188e4d8535e7afc90545943a46e8cb00cf
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - albumentations
     - dask-core  # Not imported
@@ -26,7 +26,7 @@ requirements:
     - opencv  # Not imported
     - pandas  # Imported but not in requirements
     - photutils
-    - python >=3.9
+    - python >={{ python_min }}
     - scikit-image  # Imported but not in requirements
     - scikit-learn  # Not imported
     - scipy  # Imported but not in requirements
@@ -39,6 +39,7 @@ test:
     # - pip check  # Fails due to opencv-python
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/caped-ai-augmentations
